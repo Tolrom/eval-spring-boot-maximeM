@@ -23,6 +23,10 @@ public class Product {
     @DecimalMin(value = "0.0", inclusive = false, message = "Please enter a positive price!")
     private Double price;
 
+    @ManyToOne
+    @JoinColumn(name = "id_category")
+    private Category category;
+
 
     public Product() {
     }
@@ -55,5 +59,13 @@ public class Product {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
