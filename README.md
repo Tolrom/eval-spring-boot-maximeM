@@ -68,8 +68,9 @@
           "name": "Playstation 5",
           "price": 499.99,
           "category": {
-          "id": 6,
-          "label": null
+            "id": 6,
+            "label": null
+          }
         }
         ```
   - **Not valid Example:**
