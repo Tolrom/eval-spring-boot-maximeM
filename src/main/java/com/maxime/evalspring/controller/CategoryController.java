@@ -14,14 +14,14 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping
-    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseStatus(HttpStatus.OK)
     public Iterable<Category> showCategories() {
 
         return categoryService.getAllCategories();
     }
 
     @GetMapping("/{id}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseStatus(HttpStatus.OK)
     public Category showCategoryById(@PathVariable int id) {
 
         return categoryService.getCategoryById(id);

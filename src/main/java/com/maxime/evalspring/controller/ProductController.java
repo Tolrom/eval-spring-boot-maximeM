@@ -14,13 +14,13 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping
-    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseStatus(HttpStatus.OK)
     public Iterable<Product> showProducts() {
         return productService.getAllProducts();
     }
 
     @GetMapping("/{id}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseStatus(HttpStatus.OK)
     public Product showProductById(@PathVariable int id) {
         return productService.getProductById(id);
     }
