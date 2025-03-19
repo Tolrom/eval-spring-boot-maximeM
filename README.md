@@ -54,37 +54,37 @@
   - **Valid Example:**
       ```json
       {
-      "name": "Playstation 5",
-      "price": "499.99",
-      "category": {
-        "id": "6" 
-      }
+        "name": "Playstation 5",
+        "price": "499.99",
+        "category": {
+          "id": "6" 
+        }
     }
     ```
       - **Returns:**
         ```json
-            {
-        "id": 3,
-        "name": "Playstation 5",
-        "price": 499.99,
-        "category": {
-        "id": 6,
-        "label": null
+        {
+          "id": 3,
+          "name": "Playstation 5",
+          "price": 499.99,
+          "category": {
+          "id": 6,
+          "label": null
         }
         ```
   - **Not valid Example:**
     ```json
     {
-    "name": "A",
-    "price": "-15",
+      "name": "A",
+      "price": "-15",
     }
     ```
     - **Returns:** 
       ```json
-          {
-          "price": "Please enter a positive price!",
-          "name": "Name length must be between 2 and 50",
-          "category": "Must belong to a category!"
+      {
+        "price": "Please enter a positive price!",
+        "name": "Name length must be between 2 and 50",
+        "category": "Must belong to a category!"
       }
       ```
 - **Response:** Returns the created product.
