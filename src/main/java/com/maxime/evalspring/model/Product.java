@@ -7,6 +7,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
+@Table(name = "product")
 public class Product {
 
     @Id
@@ -25,6 +26,7 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "id_category")
+    @NotNull(message = "Must belong to a category!")
     private Category category;
 
 
@@ -67,5 +69,14 @@ public class Product {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                ", name='" + name + '\'' +
+                ", price='" + price + '\'' +
+                ", category=" + category +
+                '}';
     }
 }

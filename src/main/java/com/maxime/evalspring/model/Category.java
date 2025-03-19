@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
 @Entity
+@Table(name = "category")
 public class Category {
 
     @Id
@@ -38,5 +39,10 @@ public class Category {
 
     public void setLabel(String label) {
         this.label = label;
+    }
+
+    @Override
+    public String toString() {
+        return label;
     }
 }
